@@ -1,14 +1,14 @@
-const body = document.getElementById('body');
-const darkMode = document.getElementById('darkMode');
-const btnDarkMode = document.getElementById('btnDarkMode');
+let toggle = document.getElementById('toggle')
 
-function renderStyleDarkMode(){
-    body.style.backgroundColor = '#02000E'
-    body.style.color = 'white'
-    btnDarkMode.innerHTML = '<i class="bi bi-brightness-low-fill"></i>'
-    btnDarkMode.className = 'btn text-warning h5'
-    //body.style.color = 'black!important';
-    console.log('click')
+function renderDarkMode(event){
+    let checked = event.target.checked;
+    document.body.classList.toggle('dark')
+
+
+    console.log('darkmode')
 }
 
-darkMode.addEventListener('click', renderStyleDarkMode);
+
+
+toggle.addEventListener('change', renderDarkMode);
+
